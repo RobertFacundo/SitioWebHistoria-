@@ -1,0 +1,160 @@
+.slideshow-container {
+    display: flex; // Aplica display flex para centrar los elementos hijos
+    justify-content: center; // Centra los elementos horizontalmente
+    position: relative; // Asegura que las flechas se posicionen correctamente
+
+    .mySlides {
+        margin: 0 auto; // Centra los elementos individualmente
+        animation: fade 1.5s; // Aplica animación de fundido
+        display: none; // Oculta todas las imágenes por defecto
+
+        &:first-child {
+            display: block; // Muestra solo la primera imagen
+        }
+
+        a {
+            display: flex; // Cambia el display a flex
+            flex-direction: column; // Cambia la dirección del flex a columna
+            align-items: center; // Asegura que la descripción esté posicionada correctamente
+            text-decoration: none; // Elimina la decoración de texto
+
+            .img-slider {
+                height: 390px; // Establece la altura de las imágenes
+                max-width: 600px; // Establece el ancho máximo de las imágenes
+                margin-left: 39px; // Establece el margen izquierdo
+                animation: fade 1.5s; // Aplica animación de fundido a las imágenes
+                transition: transform 1.03s ease-in-out; // Transición suave en la transformación
+
+                &:hover {
+                    transform: scale(1.03); // Escala ligeramente la imagen al pasar el mouse
+                }
+
+                &.asia {
+                    margin-left: 100px; // Define un margen izquierdo específico para la imagen de Asia
+                    margin-bottom: 0; // Elimina el margen inferior
+                }
+            }
+
+            .description {
+                font-family: "Playfair Display", serif; // Establece la fuente del texto de la descripción
+                font-style: italic; // Establece el estilo del texto a cursiva
+                font-weight: 1000px; // Establece el peso de la fuente
+                text-decoration: none; // Elimina la decoración de texto
+                text-align: center; // Centra el texto
+                margin-top: 25px; // Establece el margen superior
+                font-size: 20px; // Establece el tamaño de fuente
+                color: rgb(255, 255, 255); // Establece el color del texto
+                animation: fade2 3.9s; // Aplica animación de fundido a la descripción
+                max-width: 390px; // Establece el ancho máximo de la descripción
+
+                b {
+                    color: black; // Establece el color del texto en negrita
+                    transition: color 0.2s ease-in-out; // Transición suave en el cambio de color
+
+                    &:hover {
+                        color: rgb(255, 255, 255); // Cambia el color del texto al pasar el mouse
+                    }
+                }
+            }
+        }
+    }
+
+    .prev,
+    .next {
+        cursor: pointer; // Cambia el cursor a un puntero al pasar el mouse
+        position: fixed; // Establece la posición fija para las flechas
+        top: 50%; // Posiciona las flechas verticalmente al centro
+        width: auto; // Establece el ancho automáticamente
+        color: #252523; // Establece el color de las flechas
+        font-weight: bold; // Establece el peso de la fuente en negrita
+        font-size: 39px; // Establece el tamaño de fuente
+        transition: all 0.6s ease; // Transición suave para todos los cambios
+        user-select: none; // Evita que el usuario pueda seleccionar el texto
+    }
+
+    .next {
+        right: 23%; // Posiciona la flecha de siguiente a la derecha
+
+        &:hover {
+            color: #ffffffb6; // Cambia el color de la flecha al pasar el mouse
+            transform: scale(1.03); // Escala ligeramente la flecha al pasar el mouse
+            text-shadow: 12px 8px 7px #5e5f5a; // Agrega una sombra al texto
+        }
+    }
+
+    .prev {
+        left: 23%; // Posiciona la flecha de anterior a la izquierda
+    }
+
+    .prev:hover {
+        color: #ffffffb6; // Cambia el color de la flecha al pasar el mouse
+        transform: scale(1.03); // Escala ligeramente la flecha al pasar el mouse
+        text-shadow: -12px 8px 7px #5e5f5a; // Agrega una sombra al texto
+    }
+}
+
+// Definición de la animación de fundido
+@keyframes fade {
+    from {
+        opacity: 0.3; // Establece la opacidad inicial
+    }
+
+    to {
+        opacity: 1; // Establece la opacidad final
+    }
+}
+
+// Definición de la animación de fundido 2
+@keyframes fade2 {
+    from {
+        opacity: 0.2; // Establece la opacidad inicial
+    }
+
+    to {
+        opacity: 1; // Establece la opacidad final
+    }
+}
+
+// Media query para pantallas de hasta 800px de ancho
+@media (max-width: 800px) {
+    .slideshow-container {
+        flex-direction: column; // Cambia la dirección de los elementos a columna
+        align-items: center; // Centra los elementos verticalmente
+    }
+
+    .mySlides {
+        a {
+            .img-slider {
+                height: auto; // Ajusta la altura de las imágenes automáticamente
+                width: auto; // Ajusta el ancho de las imágenes automáticamente
+                margin: 13px 33px; // Establece el margen de las imágenes
+                overflow: hidden; // Oculta el contenido que excede el tamaño del contenedor
+
+                &.asia {
+                    margin: 0px 30px; // Define un margen izquierdo específico para la imagen de Asia
+                    width: 70vw; // Establece el ancho máximo de la imagen de Asia
+                }
+            }
+
+            .description {
+                padding-top: 0; // Elimina el relleno superior de la descripción
+                margin: 0px 27px; // Establece el margen de la descripción
+                font-size: 13px; // Establece el tamaño de fuente de la descripción
+                color: rgb(228, 228, 216) !important; // Establece el color de texto de la descripción
+                padding-bottom: 13px; // Establece el relleno inferior de la descripción
+
+                b {
+                    color: gold !important; // Establece el color del texto en negrita
+                }
+            }
+        }
+    }
+
+    .next {
+        right: 3% !important; // Posiciona la flecha de siguiente a la derecha
+    }
+
+    .prev {
+        left: 3% !important; // Posiciona la flecha de anterior a la izquierda
+    }
+}

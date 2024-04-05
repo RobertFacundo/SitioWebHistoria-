@@ -1,0 +1,260 @@
+.main-roma {
+    display: flex; // Establece el contenedor principal como flexbox
+    flex-direction: row; // Define la dirección de los elementos secundarios como fila
+    width: 100%; // Establece el ancho máximo al 100%
+    overflow: hidden; // Oculta el contenido que se desborda del contenedor
+
+    // Estilos para el aside
+    .aside-carousel {
+        width: 53vw; // Establece el ancho del aside al 53% del ancho de la ventana
+        height: 40vh; // Establece la altura del aside al 40% de la altura de la ventana
+        margin-right: 0; // Elimina el margen derecho
+        padding-right: 0; // Elimina el relleno derecho
+        z-index: 2; // Establece el índice z del aside
+        height: calc(100vh - 100px); // Calcula la altura del aside teniendo en cuenta la barra de navegación
+
+        .img-slider {
+            margin-top: 5px; // Establece un margen superior de 5px
+            margin-left: 30px; // Establece un margen izquierdo de 30px
+            margin-right: 0; // Elimina el margen derecho
+            padding-right: 0; // Elimina el relleno derecho
+            margin-bottom: 30px; // Establece un margen inferior de 30px
+            position: relative; // Establece la posición relativa
+            width: 100%; // Establece el ancho al 100%
+            height: calc(100vh - 100px); // Calcula la altura teniendo en cuenta la barra de navegación
+
+            img {
+                height: 550px; // Establece la altura de las imágenes en el carrusel
+                margin: 27px; // Establece el margen exterior de las imágenes
+                margin-right: 0; // Elimina el margen derecho
+                margin-bottom: 20px; // Establece el margen inferior de las imágenes
+                width: 90%; // Establece el ancho al 90% del contenedor
+                position: absolute; // Establece la posición absoluta
+                left: 0; // Coloca la imagen a la izquierda del contenedor
+                top: 0; // Coloca la imagen en la parte superior del contenedor
+                opacity: 0; // Establece la opacidad inicial en 0
+                box-shadow: 0px 2px 19px 5px #34331a; // Agrega sombra a las imágenes
+                transition: all 1.8s ease; // Duración y tipo de transición para la animación
+
+                &.active {
+                    opacity: 1; // Cuando la clase "active" está presente, muestra la imagen con opacidad 1
+                }
+            }
+        }
+    }
+
+    article {
+        width: 46vw; // Establece el ancho del artículo al 46% del ancho de la ventana
+        margin-right: 25px; // Establece un margen derecho de 25px
+        padding-right: 20px; // Establece un relleno derecho de 20px
+        padding-left: 20px; // Establece un relleno izquierdo de 20px
+        margin-left: 0; // Elimina el margen izquierdo
+        overflow-y: auto; // Agrega un desplazamiento vertical cuando el contenido excede el espacio disponible
+        max-height: calc(100vh - 100px); // Establece la altura máxima del artículo teniendo en cuenta la barra de navegación
+
+        /* Establece una altura máxima para el artículo, ajusta el valor según sea necesario */
+        &::-webkit-scrollbar {
+            padding-left: 5px; // Establece un relleno a la izquierda de la barra de desplazamiento
+            width: 13px; // Establece el ancho de la barra de desplazamiento
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #100f01f9; // Establece el color del mango de la barra de desplazamiento
+            border-radius: 8px; // Establece el radio de borde del mango de la barra de desplazamiento
+        }
+
+        h1,
+        h2 {
+            font-family: "Cinzel", serif; // Establece la fuente para los encabezados h1 y h2
+            font-weight: 350; // Establece el grosor de la fuente
+            font-size: 40px; // Establece el tamaño de la fuente
+            text-indent: 10px; // Establece la sangría del texto
+            text-align: center; // Alinea el texto al centro
+            letter-spacing: 2px; // Establece el espaciado entre caracteres
+            text-shadow: -4px -5px 4px #b1b1ac; // Agrega una sombra al texto
+        }
+
+        .subtitulo {
+            font-family: "Cinzel", serif; // Establece la fuente para los subtítulos
+            font-weight: 350; // Establece el grosor de la fuente
+            font-size: 23px; // Establece el tamaño de la fuente
+            text-indent: 10px; // Establece la sangría del texto
+            text-align: left; // Alinea el texto a la izquierda
+            letter-spacing: 2px; // Establece el espaciado entre caracteres
+        }
+
+        .subtitulo-right {
+            font-family: "Cinzel", serif; // Establece la fuente para los subtítulos alineados a la derecha
+            font-weight: 350; // Establece el grosor de la fuente
+            font-size: 23px; // Establece el tamaño de la fuente
+            text-indent: 10px; // Establece la sangría del texto
+            text-align: right; // Alinea el texto a la derecha
+            letter-spacing: 2px; // Establece el espaciado entre caracteres
+        }
+
+        p {
+            text-align: center; // Alinea los párrafos al centro
+            font-family: "Fauna One", serif; // Establece la fuente para los párrafos
+            font-size: 20px; // Establece el tamaño de la fuente
+            text-indent: 13px; // Establece la sangría del texto
+            letter-spacing: 0.1px; // Establece el espaciado entre caracteres
+        }
+
+        ul {
+            font-family: "Fauna One", serif; // Establece la fuente para las listas no ordenadas
+            font-size: 20px; // Establece el tamaño de la fuente
+            text-indent: 13px; // Establece la sangría del texto
+            letter-spacing: 0.1px; // Establece el espaciado entre caracteres
+            list-style-type: none; // Elimina los marcadores de lista predeterminados
+
+            li {
+                text-align: center; // Alinea los elementos de la lista al centro
+                font-family: "Fauna One", serif; // Establece la fuente para los elementos de la lista
+                font-size: 20px; // Establece el tamaño de la fuente
+                text-indent: 13px; // Establece la sangría del texto
+                letter-spacing: 0.1px; // Establece el espaciado entre caracteres
+            }
+        }
+
+        .hr {
+            border: none; // Elimina el borde predeterminado
+            height: 2px; // Establece la altura de la línea
+            background-color: #34331a8c; // Establece el color de fondo de la línea
+            margin: 20px 0; // Establece el margen superior e inferior de la línea
+            width: 70%; // Establece el ancho de la línea
+            transform: translateX(23%); // Aplica una transformación de desplazamiento horizontal a la línea
+        }
+    }
+
+    .menu-dropdown {
+        display: flex; // Establece el contenedor del menú como un contenedor flexible
+        flex-direction: column; // Establece la dirección de los elementos del menú como columna
+        justify-content: space-around; // Distribuye uniformemente el espacio alrededor de los elementos del menú
+        align-items: center; // Centra los elementos del menú horizontalmente
+        margin-left: 0; // Establece el margen izquierdo del menú
+        padding-left: 0; // Establece el relleno izquierdo del menú
+        box-shadow: 0px 2px 20px 18px #605f4b51; // Aplica una sombra al menú
+        margin-top: 39px; // Establece el margen superior del menú
+        height: 520px; // Establece la altura del menú
+        z-index: 0; // Establece el índice z del menú
+        margin-right: 0; // Establece el margen derecho del menú
+        transition: opacity 3.1 ease; // Aplica una transición suave de opacidad al menú
+        opacity: 0; // Establece la opacidad inicial del menú
+        transition: transform 0.6s ease; // Aplica una transición suave de transformación al menú
+        transform: translateX(-197px); // Desplaza el menú horizontalmente fuera de la pantalla
+        position: relative; // Establece la posición del menú como relativa
+
+        &.visible {
+            opacity: 1; // Cuando la clase "visible" está presente, el menú se muestra con opacidad 1
+        }
+    }
+
+    .menu-content {
+        display: flex; // Establece el contenedor como un contenedor flexible
+        flex-direction: column; // Establece la dirección de los elementos como columna
+        justify-content: center; // Centra verticalmente los elementos
+        align-items: center; // Centra horizontalmente los elementos
+        color: #c7cc3b; // Establece el color de texto de los elementos
+        height: 400px; // Establece la altura del contenedor
+        display: flex; // Vuelve a definir la propiedad display como flexible
+        flex-direction: column; // Vuelve a definir la dirección de los elementos como columna
+        justify-content: space-between; // Distribuye uniformemente el espacio entre los elementos
+        align-items: center; // Centra horizontalmente los elementos
+
+        a {
+            font-size: 16px; // Establece el tamaño de fuente de los enlaces
+            font-weight: 800; // Establece el grosor de la fuente de los enlaces
+            padding: 13px 5px; // Establece el relleno superior e inferior y el relleno izquierdo y derecho de los enlaces
+            font-family: "Fauna One", serif; // Establece la fuente de los enlaces
+            text-align: center; // Centra el texto dentro de los enlaces
+            text-decoration: none; // Elimina la decoración de subrayado de los enlaces
+            color: rgb(0, 0, 0); // Establece el color de texto de los enlaces
+            align-self: stretch; // Estira los enlaces para que se ajusten al ancho del contenedor
+
+            &:hover {
+                color: #f7e70f; // Cambia el color del texto de los enlaces al pasar el cursor sobre ellos
+            }
+
+            span {
+                font-size: 11px;
+            }
+        }
+
+        .a2 {
+            z-index: 2; // Establece el índice z de los enlaces
+            font-size: 10px; // Establece el tamaño de fuente de los enlaces
+            font-weight: 800; // Establece el grosor de la fuente de los enlaces
+            padding: 10px 5px; // Establece el relleno superior e inferior y el relleno izquierdo y derecho de los enlaces
+            font-family: "Fauna One", serif; // Establece la fuente de los enlaces
+            text-align: center; // Centra el texto dentro de los enlaces
+            text-decoration: none; // Elimina la decoración de subrayado de los enlaces
+            color: black; // Establece el color de texto de los enlaces
+            align-self: stretch; // Estira los enlaces para que se ajusten al ancho del contenedor
+
+            &:hover {
+                color: #f7e70f; // Cambia el color del texto de los enlaces al pasar el cursor sobre ellos
+            }
+
+            &.active {
+                color: #f0e215; // Establece un color de texto específico para los enlaces activos
+            }
+        }
+    }
+
+    .menu-content2 {
+        margin-top: 3px 10px; // Establece el margen superior del contenedor
+        color: #c7cc3b; // Establece el color de texto del contenedor
+        width: 8vw; // Establece el ancho del contenedor en unidades de vista de ancho
+        height: 400px; // Establece la altura del contenedor
+        display: flex; // Establece el contenedor como un contenedor flexible
+        flex-direction: column; // Establece la dirección de los elementos como columna
+        justify-content: center; // Centra verticalmente los elementos
+        align-items: center; // Centra horizontalmente los elementos
+
+        a {
+            z-index: 2; // Establece el índice z de los enlaces
+            font-size: 13px; // Establece el tamaño de fuente de los enlaces
+            font-weight: 800; // Establece el grosor de la fuente de los enlaces
+            padding: 10px 5px; // Establece el relleno superior e inferior y el relleno izquierdo y derecho de los enlaces
+            font-family: "Fauna One", serif; // Establece la fuente de los enlaces
+            text-align: center; // Centra el texto dentro de los enlaces
+            text-decoration: none; // Elimina la decoración de subrayado de los enlaces
+            color: black; // Establece el color de texto de los enlaces
+            align-self: stretch; // Estira los enlaces para que se ajusten al ancho del contenedor
+
+            &:hover {
+                color: #f7e70f; // Cambia el color del texto de los enlaces al pasar el cursor sobre ellos
+            }
+
+            &.active {
+                color: #f0e215; // Establece un color de texto específico para los enlaces activos
+            }
+        }
+    }
+
+    .flecham {
+        display: block; // Hace que el elemento sea un bloque
+        text-decoration: none; // Elimina la decoración de subrayado del texto
+        cursor: pointer; // Cambia el cursor a una mano al pasar sobre el elemento
+        position: fixed; // Establece la posición del elemento como fija respecto al viewport
+        color: #121203; // Establece el color de texto del elemento
+        padding: 5px 27px; // Establece el relleno superior e inferior y el relleno izquierdo y derecho del elemento
+        margin-right: 20px; // Establece el margen derecho del elemento
+        font-size: 39px; // Establece el tamaño de fuente del elemento
+        transition: all 0.6s ease; // Aplica una transición animada a todas las propiedades con duración de 0.6 segundos
+        left: 45%; // Establece la posición horizontal del elemento
+        top: 47%; // Establece la posición vertical del elemento
+        text-shadow: 16px -1px 7px #3d3f08; // Establece una sombra de texto para el elemento
+        user-select: none; // Evita que el usuario seleccione el texto del elemento
+        z-index: 1000; // Establece el índice z del elemento
+
+        &:hover {
+            color: #a5a59f; // Cambia el color de texto del elemento al pasar el cursor sobre él
+            text-shadow: 16px -1px 7px #979c1e; // Cambia la sombra de texto del elemento al pasar el cursor sobre él
+        }
+    }
+
+    // Estilos para el menú desplegable activo
+
+
+}
