@@ -265,10 +265,14 @@
     .main-roma {
         flex-direction: column;
         align-items: center;
+        .aside-carousel {
+            width: 97vw;
+            margin-bottom: 30px;
+        }
 
         article {
-            width: 97vh;
-            margin: 2px 13px;
+            width: 97vw;
+            margin: 2px 30px;
         }
         .menu-dropdown {
             display: none;

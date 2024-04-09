@@ -377,9 +377,12 @@ body {
   .main-roma {
     flex-direction: column;
     align-items: center; }
+    .main-roma .aside-carousel {
+      width: 97vw;
+      margin-bottom: 30px; }
     .main-roma article {
-      width: 97vh;
-      margin: 2px 13px; }
+      width: 97vw;
+      margin: 2px 30px; }
     .main-roma .menu-dropdown {
       display: none; }
     .main-roma .menu-content {
