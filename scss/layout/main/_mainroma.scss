@@ -258,3 +258,30 @@
 
 
 }
+
+
+@media (max-width: 997px) {
+
+    .main-roma {
+        flex-direction: column;
+        align-items: center;
+
+        article {
+            width: 97vh;
+            margin: 2px 13px;
+        }
+        .menu-dropdown {
+            display: none;
+           
+        }
+        .menu-content {
+            display: none;
+        }
+        .menu-content2 {
+            display: none;
+        }
+        .flecham {
+            display: none;
+        }
+    }
+}
