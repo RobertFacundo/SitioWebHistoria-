@@ -378,11 +378,13 @@ body {
     flex-direction: column;
     align-items: center; }
     .main-roma .aside-carousel {
-      width: 97vw;
+      width: 100vw;
       margin-bottom: 30px; }
+      .main-roma .aside-carousel .img-slider {
+        width: 100%; }
     .main-roma article {
-      width: 97vw;
-      margin: 2px 30px; }
+      width: 90vw;
+      margin: 2px 50px; }
     .main-roma .menu-dropdown {
       display: none; }
     .main-roma .menu-content {
