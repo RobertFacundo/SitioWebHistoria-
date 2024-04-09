@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 130px;
     background-color: transparent;
 
     .p-footer {
@@ -61,7 +61,7 @@
 
 @media (max-width: 767px) {
     .footer {
-
+        transform: translateY(50%);
         .p-footer {
         
             font-size: 7px;
